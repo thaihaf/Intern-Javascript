@@ -1,0 +1,166 @@
+.pricing {
+  /* --colum: 3; */
+  display: grid;
+  /* grid-template-columns: repeat(var(--colum), 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+  row-gap: 10rem;
+  padding: 15rem 0;
+}
+
+.pricing__item {
+  position: relative;
+  background: white;
+  cursor: pointer;
+}
+/* New */
+.pricing__item-new:before {
+  position: absolute;
+  z-index: 2;
+  top: -3rem;
+  left: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 6rem;
+  content: "New";
+  background-image: url(./images/serrated.png);
+  background-color: unset;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.pricing__bottom:hover > .pricing__button {
+  background-color: #000;
+}
+.pricing__main {
+  position: relative;
+  height: 27.2rem;
+}
+.pricing__main--green {
+  background: #00bcd4;
+}
+.pricing__main--blue {
+  background: #1c94ca;
+}
+.pricing__main--purple {
+  background: #7264bd;
+}
+
+/* Price */
+.pricing__price {
+  position: absolute;
+  top: calc(12rem / -2);
+  left: 4.5rem;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  background: #393d50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Source Sans Pro";
+}
+.price__num {
+  font-size: 3.2rem;
+}
+.price__num--green {
+  color: #00bcd4;
+}
+.price__num--blue {
+  color: #1c94ca;
+}
+.price__num--purple {
+  color: #7264bd;
+}
+.price__decs {
+  font-size: 1.6rem;
+  color: #99a9b5;
+}
+
+/* Type */
+.pricing__type {
+  padding: 4.5rem;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  color: white;
+}
+.type__name {
+  font-size: 3.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.type__cap {
+  font-size: 3.6rem;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+.type__decs {
+  font-size: 1.4rem;
+  line-height: 2;
+}
+
+/* Bottom */
+.pricing__bottom {
+  font-family: "Source Sans Pro";
+  border-left: 1px solid #dce0e2;
+  border-bottom: 1px solid #dce0e2;
+}
+.pricing__bottom--br {
+  border-right: 1px solid #dce0e2;
+}
+.pricing__subtitle {
+  padding: 2.9rem 4.5rem 2.5rem;
+}
+.pricing__title {
+  font-size: 2.4rem;
+  color: #5f727f;
+}
+.pricing__desc {
+  font-size: 1.4rem;
+  color: #99a9b5;
+}
+
+/* Detail */
+/* .pricing__details {
+} */
+
+.pricing__detail {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 4.5rem;
+  font-size: 1.6rem;
+  color: #5f727f;
+}
+.pricing__detail--bg {
+  background: #f4f6f7;
+}
+
+/* Buttton */
+.pricing__button {
+  margin: 4.8rem 4.5rem;
+  width: fit-content;
+  padding: 1rem 3rem;
+  font-size: 1.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 3rem;
+  background-color: #b6c6c9;
+  transition: all 0.3s ease;
+}
+
+/* Respónive */
+/* @media (max-width: 1002px) {
+  .pricing {
+    --colum: 2;
+  }
+
+} */

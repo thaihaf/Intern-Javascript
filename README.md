@@ -1,2 +1,2 @@
-# InternCut
-Each Branch are Project Cut
+# Practice_CSS
+# layout-practice
