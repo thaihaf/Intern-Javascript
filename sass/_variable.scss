@@ -1,0 +1,90 @@
+$primary-color: #99a9b5;
+$secondary-color: #00bcd4;
+$white-color: #ffffff;
+$gray-color: #6c7c86;
+$black-color: #3c3950;
+
+$bg-dark-color: #393d50;
+$bg-light-color: #f0f3f2;
+
+$bg-gray-1-color: #f0f3f2;
+$bg-gray-2-color: #c5d2d4;
+$bg-gray-3-color: #5f727f;
+$bg-gray-4-color: #494b58;
+
+$bg-gray-light : #cad3d3;
+$bg-gray : #494b58;
+
+
+$max-width: 192rem;
+
+@mixin propMixi($prop, $val) {
+  --webkit-#{$prop}: #{$val};
+  --moz-#{$prop}: #{$val};
+  --ms-#{$prop}: #{$val};
+  #{$prop}: #{$val};
+}
+
+@mixin flexbox(
+  $align: flex-start,
+  $justify: flex-start,
+  $wrap: nowrap,
+  $direction: row
+) {
+  @include propMixi(display, flex);
+  align-items: $align;
+  justify-content: $justify;
+  flex-wrap: $wrap;
+  flex-direction: $direction;
+}
+
+@mixin textStyle(
+  $size: 2,
+  $text-transform: lowercase,
+  $color: white,
+  $weight: normal
+) {
+  font-size: #{$size}rem;
+  text-transform: $text-transform;
+  color: $color;
+  font-weight: $weight;
+}
+
+@mixin positionStyle(
+  $position: unset,
+  $top: 0,
+  $bottom: 0,
+  $left: 0,
+  $right: 0,
+  $width: 0,
+  $height: 0,
+  $z-index: 1
+) {
+  position: $position;
+  top: $top;
+  bottom: $bottom;
+  left: $left;
+  right: $right;
+  width: $width;
+  height: $height;
+  z-index: $z-index;
+}
+
+@mixin overflowText($numLine: 1) {
+  display: -webkit-box;
+  -webkit-line-clamp: $numLine;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
+@mixin hiddenScroll() {
+  & {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  }
+  &::-webkit-scrollbar {
+   display: none;
+  }
+}
