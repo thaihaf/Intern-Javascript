@@ -1,5 +1,5 @@
 # InternCut
 Each Branch are Project Cut
 
-Link web Demo (Slider): https://zaolil.github.io/InternCut/
+Link web Demo: https://zaolil.github.io/InternCut/
 
