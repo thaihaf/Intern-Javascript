@@ -74,3 +74,5 @@ let makeSlideshow = (nameSlider) => {
 
   makeSlideshow(".slider-main");
   makeSlideshow(".ad-blockk");
+
+  
