@@ -1,0 +1,320 @@
+body {
+  background: #212744;
+  font-family: "Poppins", sans-serif;
+}
+body .wrapper .sign-up {
+  margin: 0;
+  padding: 2rem 10rem;
+}
+body .wrapper .sign-up .sign-up__inner {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(2, 1fr);
+  background: #262c49;
+  border-radius: 30px;
+  color: #fff;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__banner {
+  background-image: url(../images/signup/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 30px;
+  padding: 6rem 8rem;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__banner .sign-up__intro {
+  height: 100%;
+  padding: 3rem;
+  border-radius: 2rem;
+  background: rgba(0, 0, 0, 0.452);
+  display: flex;
+  flex-direction: column;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__banner .sign-up__intro .sign-up__logo {
+  width: fit-content;
+  margin-bottom: auto;
+  padding: 0.7rem 2rem;
+  background: rgba(255, 255, 255, 0.322);
+  position: relative;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__banner .sign-up__intro .sign-up__logo:after {
+  content: "";
+  width: 7rem;
+  height: 0.5px;
+  background: #ffffff;
+  top: 140%;
+  left: 0;
+  position: absolute;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__banner .sign-up__intro .sign-up__logo-child {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__banner .sign-up__intro .sign-in {
+  margin-top: auto;
+  font-size: 1.7rem;
+  text-transform: normal;
+  color: white;
+  font-weight: normal;
+  padding-top: 3rem;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__banner .sign-up__intro .sign-in__text {
+  font-weight: 500;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__banner .sign-up__intro .sign-in__link {
+  font-weight: 700;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main {
+  margin: 6rem 12rem;
+  --webkit-display: flex;
+  --moz-display: flex;
+  --ms-display: flex;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-wrap: unset;
+  flex-direction: column;
+  gap: 3em;
+  overflow: hidden;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main .sign-up__caption {
+  font-size: 5rem;
+  text-transform: normal;
+  color: white;
+  font-weight: normal;
+  text-align: center;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main #sign-up__form {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main #sign-up__form .sign-up__list {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main #sign-up__form .sign-up__list .sign-up__item {
+  margin-bottom: 1.5rem;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main #sign-up__form .sign-up__list .sign-up__item:last-child {
+  margin-bottom: auto;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main #sign-up__form .sign-up__list .sign-up__item .sign-up__title {
+  font-size: 1.5rem;
+  text-transform: normal;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main #sign-up__form .sign-up__list .sign-up__item .input-bar {
+  font-size: 1.5rem;
+  text-transform: normal;
+  color: gray;
+  font-weight: 500;
+  --webkit-display: flex;
+  --moz-display: flex;
+  --ms-display: flex;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  width: 100%;
+  height: 5rem;
+  border-radius: 10px;
+  border: 1px solid gray;
+  transition: all 0.2s ease;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main #sign-up__form .sign-up__list .sign-up__item .input-bar.is-focus {
+  border: 1px solid #1dbf92;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main #sign-up__form .sign-up__list .sign-up__item .input-bar.is-focus ion-icon {
+  color: #1dbf92;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main #sign-up__form .sign-up__list .sign-up__item .input-bar.is-valid {
+  border: 1px solid #1dbf92;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main #sign-up__form .sign-up__list .sign-up__item .input-bar.is-valid ion-icon {
+  color: #1dbf92;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main #sign-up__form .sign-up__list .sign-up__item .input-bar.is-valid ~ .form__mess {
+  display: none;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main #sign-up__form .sign-up__list .sign-up__item .input-bar.is-valid > .input-bar__icons .icon__valid {
+  display: block;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main #sign-up__form .sign-up__list .sign-up__item .input-bar.is-invalid {
+  border: 1px solid red;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main #sign-up__form .sign-up__list .sign-up__item .input-bar.is-invalid ion-icon {
+  color: red;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main #sign-up__form .sign-up__list .sign-up__item .input-bar.is-invalid ~ .form__mess {
+  display: block;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main #sign-up__form .sign-up__list .sign-up__item .input-bar.is-invalid > .input-bar__icons .icon__invalid {
+  display: block;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main #sign-up__form .sign-up__list .sign-up__item .input-bar__icons {
+  --webkit-display: flex;
+  --moz-display: flex;
+  --ms-display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  min-width: max-content;
+  padding: 0 2rem;
+  margin-right: auto;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main #sign-up__form .sign-up__list .sign-up__item .input-bar__icons .input-bar__icon {
+  font-size: 2.2rem;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main #sign-up__form .sign-up__list .sign-up__item .input-bar__icons .input-bar__icon.right {
+  display: none;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main #sign-up__form .sign-up__list .sign-up__item .input-bar__input {
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  background: none !important;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main #sign-up__form .sign-up__list .sign-up__item .input-bar #btn__getcode {
+  min-width: max-content;
+  margin-left: auto;
+  padding: 0 1.3rem;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  border: none;
+  background: none;
+  color: gray;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main #sign-up__form .sign-up__list .sign-up__item .input-bar #btn__getcode.active {
+  color: #ffffff;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main #sign-up__form .sign-up__list .sign-up__item .form__mess {
+  color: red;
+  font-size: 1.5rem;
+  margin: 0.7rem 0 0 2rem;
+  transition: all 0.3s ease;
+  display: none;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main #sign-up__form .sign-up__list .form__btns {
+  display: flex;
+  gap: 2rem;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main #sign-up__form .sign-up__list .form__btns .form__btn {
+  font-size: 2rem;
+  text-transform: normal;
+  color: #ffffff;
+  font-weight: 500;
+  --webkit-display: flex;
+  --moz-display: flex;
+  --ms-display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 1.6rem;
+  border-radius: 10px;
+  border: 0.5px solid gray;
+  background: gray;
+  margin-top: 3.5rem;
+  min-width: max-content;
+  width: 100%;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main #sign-up__form .sign-up__list .form__btns .form__btn.active {
+  background: #1dbf92;
+  border: 0.5px solid transparent;
+  color: #ffffff;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main #sign-up__form .sign-up__list .form__btns #btn__back {
+  width: 30%;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main #sign-up__form .sign-up__list .form__btns #btn__submit {
+  width: 80%;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main .sign-up__separation {
+  --webkit-display: flex;
+  --moz-display: flex;
+  --ms-display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main .sign-up__separation .sign-up__text {
+  font-size: 1.3rem;
+  text-transform: lowercase;
+  color: gray;
+  font-weight: normal;
+  position: relative;
+  width: fit-content;
+  padding: 0 1.7rem;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main .sign-up__separation .sign-up__text:after {
+  position: absolute;
+  content: "";
+  width: 10rem;
+  height: 0.5px;
+  background: gray;
+  top: 50%;
+  right: 100%;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main .sign-up__separation .sign-up__text:before {
+  position: absolute;
+  content: "";
+  width: 10rem;
+  height: 0.5px;
+  background: gray;
+  top: 50%;
+  left: 100%;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main .sign-up__socials .sign-up__social {
+  font-size: 2rem;
+  text-transform: normal;
+  color: #ffffff;
+  font-weight: 500;
+  --webkit-display: flex;
+  --moz-display: flex;
+  --ms-display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 1.6rem;
+  border-radius: 10px;
+  border: 0.5px solid gray;
+  background: gray;
+  width: 100%;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main .sign-up__socials .sign-up__social.active {
+  background: transparent;
+  border: 0.5px solid #1dbf92;
+  color: #ffffff;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main .sign-up__socials .sign-up__social:not(:last-child) {
+  margin-bottom: 3.5rem;
+}
+body .wrapper .sign-up .sign-up__inner .sign-up__main .sign-up__socials .sign-up__social .sign-up__social-icon {
+  --webkit-display: flex;
+  --moz-display: flex;
+  --ms-display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+/*# sourceMappingURL=signup.css.map */
