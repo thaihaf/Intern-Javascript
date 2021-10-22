@@ -20,7 +20,7 @@ function Validator(formSelector) {
       return value.trim() ? undefined : "Vui lògn nhập trường này";
     },
     isName: (value) => {
-      let regex = /^[^~!@##$%^&*()0-9]+$/;
+      let regex = /^[a-zA-Z0-9]+([_ -]?[a-zA-Z0-9])*$/;
 
       return regex.test(value)
         ? undefined
@@ -33,7 +33,7 @@ function Validator(formSelector) {
         : "Vui lòng nhập theo định dạng email";
     },
     isPass: (value) => {
-      let regex = /^(?=.*[a-z])(?=.*[A-Z])*[^\s]*$/;
+      let regex = /^(?=.*[a-z])(?=.*[A-Z])/;
 
       return regex.test(value)
         ? undefined
@@ -111,14 +111,7 @@ function Validator(formSelector) {
     // Submit Click
     formElement.submit(function (e) {
       e.preventDefault();
-      let isValidForm = true;
-
-      let inputs = formElement.find(".sign-up__list.2").find("[name][rule]");
-      for (const inputTemp of inputs) {
-        isValidForm = handlerValid(inputTemp);
-      }
-
-      if (isValidForm) {
+      if (handlerBtnSubmit(".sign-up__list.2")) {
         alert("success");
       } else {
         alert("error");
@@ -128,21 +121,27 @@ function Validator(formSelector) {
     // Continue Click
     let continueBtn = formElement.find("#btn__continue");
     continueBtn.click(function () {
-      let isValidForm = true;
-      let inputs = formElement.find(".sign-up__list.1").find("[name][rule]");
-
-      for (const inputTemp of inputs) {
-        isValidForm = handlerValid(inputTemp);
-      }
-
-      // succes
-      if (isValidForm) {
+      if (handlerBtnSubmit(".sign-up__list.1")) {
         formElement.css({
           transition: "all 0.5s ease",
           transform: `translateX(-${formElement.innerWidth()}px)`,
         });
       }
     });
+
+    // Event Click button
+    function handlerBtnSubmit(classList) {
+      let countTrue = 0;
+      let inputs = formElement.find(`${classList}`).find("[name][rule]");
+
+      for (const inputTemp of inputs) {
+        if (handlerValid(inputTemp)) {
+          ++countTrue;
+        }
+      }
+
+      return countTrue === inputs.length;
+    }
 
     // Back Click
     let backBtn = formElement.find("#btn__back");
@@ -159,31 +158,31 @@ function Validator(formSelector) {
   function handlerValid(input) {
     let errMessage;
 
-    if (input.name == "cf-pass") {
+    
+    // get functions from formRule obj with key = input.name
+    let rules = formRule[input.name];
+    
+    // rule = function()
+    rules.find((rule) => {
+      errMessage = rule(input.value);
+      return errMessage;
+    });
+    
+    if (input.name == "cf-pass" && input.value != "") {
       errMessage = checkCfPass(input.value);
-    } else {
-      // get functions from formRule obj with key = input.name
-      let rules = formRule[input.name];
-
-      // rule = function()
-      // loop all rule and stop in the first err
-      rules.find((rule) => {
-        errMessage = rule(input.value);
-        return errMessage;
-      });
     }
 
-    showMessage(input, errMessage);
+    handlerDOM(input, errMessage);
 
     return !errMessage;
   }
-  
+
   function checkCfPass(cfPass) {
     let passValue = formElement.find("[name='pass']").val();
     return passValue === cfPass ? undefined : "Pass not match";
   }
 
-  function showMessage(inputElement, errMessage) {
+  function handlerDOM(inputElement, errMessage) {
     let parentElement = inputElement.parentElement;
     let messElement = parentElement.parentElement.querySelector(".form__mess");
     let isVaLidEmail = true;

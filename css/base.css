@@ -36,19 +36,18 @@ a {
 .wrapper {
   max-width: 192rem;
   margin: 0 auto;
-
 }
-.wrapper-black{
+.wrapper-black {
   background: #1b1b2b;
 }
-.wrapper--gray-light{
+.wrapper--gray-light {
   background: #e8edeb;
 }
-.wrapper--gray{
+.wrapper--gray {
   background: #494b58;
 }
-.wrapper--green{
-  background: #83ECCF;
+.wrapper--green {
+  background: #83eccf;
 }
 
 .container {
