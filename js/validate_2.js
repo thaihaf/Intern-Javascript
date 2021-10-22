@@ -17,7 +17,7 @@ function Validator(formSelector) {
   // Validate object with key = rule
   let validatorRules = {
     required: (value) => {
-      return value.trim() ? undefined : "Vui lògn nhập trường này";
+      return value.trim() ? undefined : "Vui lòng nhập trường này";
     },
     isName: (value) => {
       let regex = /^[a-zA-Z0-9]+([_ -]?[a-zA-Z0-9])*$/;
