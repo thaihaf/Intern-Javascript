@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN UP</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/signup.css">
+</head>
+
+<body>
+    <div class="wrapper wrapper--green">
+        <div class="sign-up">
+            <div class="sign-up__inner">
+                <div class="sign-up__banner">
+
+                    <div class="sign-up__intro">
+                        <div class="sign-up__logo">
+                            <div class="sign-up__logo-child">thegood</div>
+                            <div class="sign-up__logo-child">network</div>
+                        </div>
+
+                        <div class="sign-in">
+                            <div class="sign-in__text">Already have an account?</div>
+                            <a href="./signIn.html" class="sign-in__link">Sign up</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sign-up__main">
+                    <div class="sign-up__caption">Sign up</div>
+
+                    <form action="" id="sign-up__form">
+                        <div class="sign-up__list 1">
+                            <div class="sign-up__item " id="item-name">
+                                <div class="sign-up__title">Name</div>
+                                <div class="input-bar">
+                                    <div class="input-bar__icons">
+                                        <ion-icon name="person-outline" class="input-bar__icon left"></ion-icon>
+                                    </div>
+                                    <input class="input-bar__input" id="name" name="fullname" rule="required|isName"
+                                        type="text" placeholder="VD : Thai Ha">
+                                    <div class="input-bar__icons">
+                                        <ion-icon name="checkmark-circle-outline"
+                                            class="input-bar__icon icon__valid right"></ion-icon>
+                                        <ion-icon name="alert-circle-outline"
+                                            class="input-bar__icon icon__invalid right"></ion-icon>
+                                    </div>
+                                </div>
+                                <div class="form__mess">*Error error</div>
+                            </div>
+                            <div class="sign-up__item " id="item-email">
+                                <div class="sign-up__title">Email address</div>
+                                <div class="input-bar">
+                                    <div class="input-bar__icons">
+                                        <ion-icon name="mail-outline" class="input-bar__icon left"></ion-icon>
+                                    </div>
+                                    <input class="input-bar__input" id="email" name="email" type="email"
+                                        rule="required|isEmail" placeholder="VD : email@domain.com">
+                                    <div class="input-bar__icons">
+                                        <ion-icon name="checkmark-circle-outline"
+                                            class="input-bar__icon icon__valid right"></ion-icon>
+                                        <ion-icon name="alert-circle-outline"
+                                            class="input-bar__icon icon__invalid right"></ion-icon>
+                                    </div>
+                                    <button class="input-bar__btn" type="button" id="btn__getcode" disabled
+                                        autofocus>get
+                                        code</button>
+                                </div>
+                                <div class="form__mess">*Error error</div>
+                            </div>
+                            <div class="sign-up__item " id="item-code">
+                                <div class="sign-up__title">Code</div>
+                                <div class="input-bar">
+                                    <div class="input-bar__icons">
+                                        <ion-icon name="keypad-outline" class="input-bar__icon left"></ion-icon>
+                                    </div>
+                                    <input class="input-bar__input" id="code" name="code" type="text"
+                                        rule="required|isDigit|limitLenght:6" placeholder="Enter code">
+                                    <div class="input-bar__icons">
+                                        <ion-icon name="checkmark-circle-outline"
+                                            class="input-bar__icon icon__valid right"></ion-icon>
+                                        <ion-icon name="alert-circle-outline"
+                                            class="input-bar__icon icon__invalid right"></ion-icon>
+                                    </div>
+                                </div>
+                                <div class="form__mess">*Error error</div>
+                            </div>
+
+                            <div class="form__btns">
+                                <button class="form__btn active" type="button" id="btn__continue">
+                                    <div class="sign-up__text">Continue</div>
+                                    <ion-icon name="arrow-forward-outline" class="sign-up__icon"></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="sign-up__list 2">
+                            <div class="sign-up__item " id="item-username">
+                                <div class="sign-up__title">Username</div>
+                                <div class="input-bar">
+                                    <div class="input-bar__icons">
+                                        <ion-icon name="body-outline" class="input-bar__icon left"></ion-icon>
+                                    </div>
+                                    <input class="input-bar__input" id="username" name="username" type="text"
+                                        rule="required|min:6|max:20|isName" placeholder="Enter your username">
+                                    <div class="input-bar__icons">
+                                        <ion-icon name="checkmark-circle-outline"
+                                            class="input-bar__icon icon__valid right"></ion-icon>
+                                        <ion-icon name="alert-circle-outline"
+                                            class="input-bar__icon icon__invalid right"></ion-icon>
+                                    </div>
+                                </div>
+                                <div class="form__mess">*Error error</div>
+                            </div>
+                            <div class="sign-up__item " id="item-pass">
+                                <div class="sign-up__title">Password</div>
+                                <div class="input-bar">
+                                    <div class="input-bar__icons">
+                                        <ion-icon name="key-outline" class="input-bar__icon left"></ion-icon>
+                                    </div>
+                                    <input class="input-bar__input" id="pass" name="pass" type="pass"
+                                        placeholder="Enter your password" rule="required|min:8|max:32|isPass">
+                                    <div class="input-bar__icons">
+                                        <ion-icon name="checkmark-circle-outline"
+                                            class="input-bar__icon icon__valid right"></ion-icon>
+                                        <ion-icon name="alert-circle-outline"
+                                            class="input-bar__icon icon__invalid right"></ion-icon>
+                                    </div>
+                                </div>
+                                <div class="form__mess">*Error error</div>
+                            </div>
+                            <div class="sign-up__item " id="item-cf-pass">
+                                <div class="sign-up__title">Confirm password</div>
+                                <div class="input-bar">
+                                    <div class="input-bar__icons">
+                                        <ion-icon name="key-outline" class="input-bar__icon left"></ion-icon>
+                                    </div>
+
+                                    <input class="input-bar__input" id="cf-pass" name="cf-pass" type="pass"
+                                        placeholder="Enter confirm password" rule="required">
+                                    <div class="input-bar__icons">
+                                        <ion-icon name="checkmark-circle-outline"
+                                            class="input-bar__icon icon__valid right"></ion-icon>
+                                        <ion-icon name="alert-circle-outline"
+                                            class="input-bar__icon icon__invalid right"></ion-icon>
+                                    </div>
+                                </div>
+                                <div class="form__mess">*Error error</div>
+                            </div>
+
+                            <div class="form__btns">
+                                <button class="form__btn active" type="button" id="btn__back">
+                                    <ion-icon name="arrow-back-outline"></ion-icon>
+                                    <div class="sign-up__text">Back</div>
+                                </button>
+                                <button class="form__btn active" type="submit" id="btn__submit">
+                                    <div class="sign-up__text">Sign up</div>
+                                    <ion-icon name="arrow-forward-outline" class="sign-up__icon"></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="sign-up__separation">
+                        <div class="sign-up__text">or</div>
+                    </div>
+
+                    <div class="sign-up__socials">
+                        <button class="sign-up__social active">
+                            <div class="sign-up__social-icon">
+                                <ion-icon name="logo-google"></ion-icon>
+                            </div>
+                            <div class="sign-up__social-text">Continue with Google</div>
+                        </button>
+                        <button class="sign-up__social active">
+                            <div class="sign-up__social-icon">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                            </div>
+                            <div class="sign-up__social-text">Continue with Facebook</div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- Ionicon -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- JS -->
+    <script type="text/javascript" src="./js/validate_2.js"></script>
+</body>
+
+</html>
